@@ -1,0 +1,27 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ * Nav filter
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+.nav-filter-wrap{
+  display: flex;
+  align-items: center;
+  padding: $padding-md $padding-xs;
+}
+.nav-filter-nav{
+  @include l-inline();
+  padding-left: $space-xs;
+  
+  &__nav,
+  &__title{
+  }
+  
+  &__item{
+    &__label,
+    &__checkbox {
+      vertical-align: middle;
+    }
+  }
+}

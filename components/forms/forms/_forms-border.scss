@@ -1,0 +1,87 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ * Forms fields with backgrounds
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+$form-border-class              : "c-form-border";
+$form-border-font-size          : $p-sm;
+$form-border-color              : $bodyFontColor;
+
+// labels
+$form-border-label-fs           : $p-sm;
+$form-border-label-color        : $colorf;
+$form-border-label-margin       : 0 0 $space-xs;
+
+// inputs
+$form-border-input-bg           : transparent;
+$form-border-input-height       : $size-rem-sm;
+$form-border-input-padding      : .9em 1.4em;
+$form-border-input-radius       : 40px;
+$form-border-placeholder-color  : $colorf;
+$form-border-error-color        : red;
+
+// 
+// Specials styles
+// 
+  
+label {
+  color: $form-border-label-color;
+  font-size: $form-border-label-fs;
+  margin: $form-border-label-margin;
+  
+  // Hide jQuery validation text errors
+  &.error { display:none !important }
+}
+
+textarea,
+input{
+  border: 0;
+  font-size: $form-border-font-size;
+  color: $form-border-color;
+  background-color: $form-border-input-bg;
+  @include border-radius($form-border-input-radius);
+}
+// 100% width fields
+%input-full, // clase para comportamiento por defecto input 100% + padding
+input[type="date"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+textarea {
+    width: 100%;
+    display: block;
+    //height: $form-border-input-height;
+    padding: $form-border-input-padding;
+    line-height: 1;
+    border: 2px solid $colorf;
+
+    
+}
+
+// 
+// Placeholders
+// 
+textarea,
+input{
+  @include placeholder($form-border-placeholder-color);
+
+  &.error{
+    border: 1px solid red !important;
+    color: $form-border-error-color;
+    @include placeholder($form-border-error-color);
+  }
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  margin-top: 1.2em;
+  margin-bottom:0.5em;
+}

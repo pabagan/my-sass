@@ -1,0 +1,48 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ * Media elements
+ *
+ * a credit to amazing bootstrap!
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+// cols: thumb / content
+$media-class      : "media";
+
+.#{$media-class}{
+    display: table;
+    @include clearfix();
+
+    &__thumb, &__ct{
+        display: table-cell;
+        vertical-align: top;
+        zoom: 1;
+        overflow: hidden;
+
+    }
+    
+    &__thumb{
+        &__link{
+            display: block;
+        }
+        &__img{
+            display: block;
+        }
+    }
+    
+    &__ct{
+        padding: 0 $space-xs;
+        
+        &--m{
+            vertical-align: middle;
+        }
+        &--t{
+            vertical-align: top;
+        }
+
+        &--b{
+            vertical-align: bottom;
+        }
+    }
+}

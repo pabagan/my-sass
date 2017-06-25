@@ -1,0 +1,25 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ * Component Squares
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+$squares-class      : "c-sq";
+
+//
+// Create square classes
+//
+[class*="#{$squares-class}"] {
+	display: inline-block;
+  text-align: center;
+}
+
+@each $size, $value in $rem-sizes {
+    .#{$squares-class}-#{$size} { 
+        @include size($value, $value);
+        &, > * {
+        	line-height: $value !important;
+        }
+    }
+}

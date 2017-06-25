@@ -1,0 +1,25 @@
+@import "bem-components/presentation-full";
+@import "bem-components/subscribe";
+@import "bem-components/masked-image";
+@import "bem-components/toggle-boxes";
+@import "bem-components/post-loop";
+@import "bem-components/bubble-content";
+@import "bem-components/footer";
+
+.underline{
+  border-width: 0 0 3px;
+  border-style: solid;
+  margin-top: 2px;
+  //border: 3px solid $color0;
+}
+
+
+.Tiled-slider {
+}
+.Input{
+  &--contact{
+    border-color: $color0 !important;
+    color: $color0 !important;
+    @include placeholder($color0);
+  }
+}

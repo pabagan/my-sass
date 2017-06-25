@@ -1,0 +1,202 @@
+// 
+// App Header
+// 
+.app-header {
+  height: $appHeader-height; 
+  width: 100%;
+  background-color: $appHeader-bg;
+  
+  &--shadow {
+    @include shadow(0 8px 5px -5px rgba(0, 0, 0, 0.1));
+  }
+
+  &--fixed {
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: $z7;
+    position: fixed;
+  }
+}
+
+// 
+// App Logo
+// 
+.app-logo {
+  margin: $appLogo-margin;
+  display: flex;
+  float: left;
+  max-width: 240px;
+  align-items: center;
+  height: $appHeader-height;
+  &__txt {
+    font-size: $appLogo-fs;
+    line-height: $appHeader-height;
+    margin: 0;
+    color: $appLogo-color;
+  }
+
+  &__img {
+    display: block;
+    height: $appLogo-height;
+  }
+}
+
+
+.app-nav{
+  position: relative;
+  z-index: $z6;
+  font-family: $main-nav-font;
+  background-color: $main-nav-bg;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+
+  @include l-reset();
+
+  &.is_on {
+    height: auto;
+  }
+  
+  //
+  // list item
+  //
+  &__item {
+    position: relative;
+    
+    // link
+    &__link {
+      font-size: $main-nav-fs;
+      line-height: $main-nav-lh;
+      letter-spacing: $main-nav-l-spacing;
+      font-weight: $main-nav-f-weight;
+      color: $main-nav-color;
+      display: block;
+      padding: $main-nav-i-padding;
+      // bootstrap scrollSpy
+      
+      // active link
+      &--active { 
+        //background-color: $main-nav-active-bg;
+        //color: $main-nav-active-color;
+        text-decoration: underline;
+      }
+    }
+  }
+  
+  //
+  // submenu navigation
+  //
+  &__subnav{
+    @include l-reset();
+    //@include box-shadow( 0 2px 2px -1px black(.1));
+    // managed by superfish
+    //display: none;
+    z-index: $z3;
+    //background-color: ;
+    &__item {
+      display: block;
+      width: 100%;
+      text-align: inherit;
+      background-color: $main-nav-child-bg;
+    }
+
+    &__link{
+      line-height: $main-nav-lh;
+      color: $main-nav-child-color;
+      padding: $main-nav-child-padding;
+      display: block;
+      font-size: $main-nav-fs;
+    }
+  }
+
+}
+
+// 
+// Menu toggle
+//     
+.app-nav-toggle {
+  background: $appToggle-bg;
+  margin: 0;
+  color: $appToggle-color;
+  float: right;
+  @include square-make($appHeader-height);
+  @extend %icon;
+  font-size: $appToggle-fs;
+  line-height: $appHeader-height;
+
+  &[aria-expanded="false"] {
+    &:before {
+      content: $appToggle-icon;
+    }
+  }
+
+  &[aria-expanded="true"] {
+    &:before {
+      content: $appToggle-icon-expanded;
+    }
+  }
+}
+
+
+
+
+// bigger screen breackpoint
+@if($main-nav-breakpoint == 1){
+  @include media-query($main-nav-breakpoint-at){
+    .app-nav-toggle{
+      display: none;
+    }
+    .app-nav{
+      // just mobile
+      position: static;
+      width: auto;
+      float: right;
+      margin-right: $space-xs;
+      overflow: visible;
+      background-color: $main-nav2-bg;
+      
+      &__item{
+        float: left;
+        position: relative;
+
+        &__link{
+          display: block;
+          font-size: $main-nav2-fs;
+          line-height: $main-nav2-lh;
+          letter-spacing: $main-nav2-l-spacing;
+          font-weight: $main-nav2-f-weight;
+          color: $main-nav2-color;
+          padding: $main-nav2-i-padding;
+          // bootstrap scrollSpy
+          &--active { 
+            //background-color: $main-nav2-active-bg;
+            //color: $main-nav2-active-color;
+            //text-decoration: underline;
+          }
+        }
+      }
+
+      // submenu navigation
+      &__subnav{
+        position: absolute;
+        top: $appHeader-height;
+        left: 0;
+        width: 160px;
+        &--r{
+          //right: 0;
+        }
+
+        &__item{
+          background-color: $main-nav2-child-bg;
+          //font-size: 90%;
+        }
+
+        &__link{
+          color: $main-nav2-child-color;
+          line-height: $main-nav2-child-lh;
+        }
+      }
+    } 
+  }
+} // end if $main-nav-breakpoint

@@ -1,0 +1,40 @@
+.Bubble{
+  width: 14rem;
+  height: 14rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  padding: 1rem;
+  @include border-radius(50%);
+
+  &--1 {
+    background-color: $color1;
+    
+  }
+
+  &--2 {
+    color: $color1;
+    background-color: $color0;
+  }
+  
+  &__ct {
+  }
+
+  &__wrap{
+    position: relative;
+    z-index: $z2;
+    //padding: 4rem;
+  }
+}
+
+.Bg__line--half{
+  position: relative;
+  &:before{
+    background-color: $color1;
+    width: 2px;
+    position: absolute;
+    z-index: $z1;
+    top: 0;
+    content: ' ';
+    height: 100%;
+  }
+}

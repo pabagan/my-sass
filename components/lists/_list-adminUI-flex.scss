@@ -1,0 +1,50 @@
+/**
+ * Listas
+ */
+
+$c-admin-base-height: $size-rem-sm;
+
+.c-manager {
+  @include clearfix;
+  &__header {
+    line-height: $c-admin-base-height / 1.5;
+    font-weight: 700;
+    font-size: $p-sm;
+    border-bottom: 4px solid $grey3;
+    margin:0;
+  }
+
+  &__list {
+    list-style: none;
+    @include clearfix();
+    padding: 0;
+    position: relative;
+    border-bottom: 1px solid $grey3;
+  }
+
+}
+.c-manager-item {
+  display: flex;
+  height: $c-admin-base-height;
+  overflow: hidden;
+  border-bottom: 1px solid $grey7;
+
+  &__name{
+    line-height: $c-admin-base-height;
+  }
+
+  &__bt {
+    //@include border-radius(50%);
+    display: inline-block;
+    text-align: center;
+    //height: $c-admin-base-height;
+    line-height: $c-admin-base-height;
+    width: $c-admin-base-height;
+    height: $c-admin-base-height;
+    color: $bodyFontColor;
+    
+    &:hover{
+      background-color: $grey9;
+    }
+  }
+}

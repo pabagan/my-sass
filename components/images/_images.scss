@@ -1,0 +1,23 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ * Images
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+$images-class: "c-img";
+
+%#{$images-class},
+.#{$images-class} {
+    display: block;
+    max-width: 100% !important;
+    height: auto;
+
+    &--h{
+      max-height: 100% !important;
+      width: auto;
+    }
+    &--rd{
+      @include border-radius(50%);
+    }
+}

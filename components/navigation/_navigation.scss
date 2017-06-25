@@ -1,0 +1,95 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ * Navigation
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+// para listas verticales con elementos 
+// con borde inferior y superior.
+// Block menus to inline 
+$navs-to-inline-breakpoint: 'sm';
+
+.nav-col,
+.nav {
+    @include l-reset();
+
+    // li
+    &__item{
+        position: relative;
+        ul,ol{
+            // managed by superfish
+            //display: none;
+        }
+
+        &:hover{
+            ul,ol{
+                // managed by superfish
+                // display: block;
+            }
+        }
+    }
+
+    // Enlaces
+    &__link{
+        text-decoration: none;
+        display: block;
+    }
+}
+
+// submenu
+.nav-children {
+    //@include box-shadow( 0 2px 2px -1px black(.1));
+    // managed by superfish
+    //display: none;
+    z-index: $z3;
+    margin: 0;
+    padding: 0;
+    //background-color: ;
+    &__item {
+        display: block;
+        width: 100%;
+        text-align: inherit;
+    }
+}
+
+// Comportamiento en salto
+@include media-query($navs-to-inline-breakpoint)  {
+
+    //
+    // Navegación inline.
+    //
+    .c-nav-bar{
+        li{
+            display: inline-block;
+            float: left;
+        }
+
+        .sub-menu,
+        .children {
+            position: absolute;
+            top: 100%;
+            bottom: -100%;
+            left: -10%;
+            width: 120%;
+        }    
+    }
+
+    //
+    // Navegación Column
+    //
+    .c-nav-col{
+
+        li{
+            display: block;
+        }
+
+        .sub-menu,
+        .children {
+            //position: absolute;
+            // top: 100%;
+            // left: 0;
+            width: 100%;            
+        }
+    }
+}

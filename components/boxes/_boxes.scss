@@ -1,0 +1,87 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ * Boxes reseting firt/last element 
+ * spacing to keep just parent's box
+ * inner spacing.
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+$box-class      : "c-box";
+// mobile paddings, just 1 size
+$box-xs 	  : $base-padding;
+$box-xs-u	  : $base-padding-u; // with units
+
+/* Padding sizes mobile */
+.#{$box-class}-sm,
+.#{$box-class},
+.#{$box-class}-lg {
+  padding: ($box-xs * 3)+ em $box-xs-u;
+}
+.#{$box-class}v-sm,
+.#{$box-class}v,
+.#{$box-class}v-lg {
+  padding-top: ($box-xs * 3)+ em;
+  padding-bottom: ($box-xs * 3)+ em;
+
+}
+.#{$box-class}s-sm,
+.#{$box-class}s,
+.#{$box-class}s-lg {
+  padding-right: $box-xs-u;
+  padding-left: $box-xs-u;
+}
+
+/* Tablet special */
+@media screen and  (min-width: $screen-sm) and (max-width: $screen-md){
+  %p-tablet,
+  .p-tablet{
+    padding-right: $padding-4;
+    padding-left: $padding-4;
+  }
+}
+
+
+/* Padding from small devices. Usually tablets */
+@include media-query('sm') {
+  // Box SM
+  .#{$box-class}-sm{
+    padding: 64px; 
+  }
+
+  // Box MD
+  .#{$box-class},
+  .#{$box-class}-lg {
+    padding: $padding-4; 
+  }
+  
+  .#{$box-class}v,
+  .#{$box-class}v-lg {
+    padding-top: $padding-4;
+    padding-bottom: $padding-4;
+
+  }
+  
+  .#{$box-class}s-lg,
+	.#{$box-class}s {
+	  padding-right: $padding-4; 
+	  padding-left: $padding-4; 
+	}
+}
+
+
+@include media-query('xl') {	
+	// Box LG
+	.#{$box-class}-lg {
+	  padding: $padding-5; 
+	}
+	.#{$box-class}v-lg {
+	  padding-top: $padding-5;
+	  padding-bottom: $padding-5;
+
+	}
+	.#{$box-class}s-lg {
+	  padding-right: $padding-5; 
+	  padding-left: $padding-5; 
+	}
+}

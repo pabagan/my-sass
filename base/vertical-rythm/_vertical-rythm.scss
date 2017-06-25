@@ -1,0 +1,87 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ *   Default Vertical Rythm
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+
+//
+// Space SM
+//
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4 {
+  margin-bottom: $space-sm;
+}
+
+//
+// Space MD
+//
+form,
+//blockquote,
+img,
+> ol,
+> ul,
+> dl,
+h5, .h5,
+h6, .h6,
+.salto,
+cite {
+  margin-bottom: $space-md;
+}
+
+// avoid margin issue caused at Firefox
+p, .p {
+  padding-bottom: $space-md;
+}
+
+
+// Space LG
+// ---------------------------
+.c-embeds,
+table,
+pre {
+  margin-bottom: $space-lg;
+}
+
+
+/**--------------------------------------
+ * --------------------------------------
+ *
+ *   Extra spaces for singles
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+.c-entry,
+.entry-content {
+
+  //
+  // Space XS
+  //
+  //h1, .h1,
+  h2, .h2,
+  h3, .h3,
+  h4, .h4,
+  h5, .h5,
+  h6, .h6 {
+    margin-top: $space-xs;
+  }
+
+  //
+  // Space LG
+  //
+  > ol,
+  > ul,
+  > dl,
+  p {
+    padding-bottom: $space-lg;
+  }
+
+  .c-embeds,
+  table,
+  pre {
+    margin-bottom: $space-lg;
+  }
+}

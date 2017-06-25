@@ -1,0 +1,96 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ * Grid Width
+ * credit: Bootstrap
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+$row-class          : 'row';
+$col-class          : 'col';
+$container-class    : 'container';
+$grid-item-padding  : $base-padding-u;
+$total-colums       : 12;
+
+// Container sizes
+// False makes   no container
+$container-sizes: (
+    'sm': 100%,
+    'md': 90%,
+    'lg': 960px,
+    'xl': 1160px,
+    'xxl': 1360px,
+);
+
+// 
+// Row is parent class for 
+// grid/containers
+// 
+.#{$row-class}{ @include clearfix; }
+
+// 
+// Container class
+// 
+[class*="#{$container-class}"]{ 
+    padding: $grid-item-padding;
+    position: relative;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    @include clearfix;
+}
+
+// 
+// Col class
+// 
+[class*="#{$col-class}"] {
+    padding: $grid-item-padding;
+    float: left;
+    display: block;
+}
+
+// 
+// Container sizes responsive
+// 
+/* Main container sizes */
+@each $size, $value in $container-sizes {
+    @include media-query($size){
+        .#{$container-class}{
+            width: $value;
+        }
+        .#{$container-class}-#{$size}{
+            width: $value;
+        }
+    }
+}
+
+/**
+ * Grid 12 Colums
+ */
+@include grid-width($col-class, 'xs', $total-colums);
+
+
+/* Grid SM */
+@media screen and (min-width: $screen-sm-min) { // 639px
+    @include grid-width($col-class, 'sm', $total-colums);
+}
+
+
+/* Grid MD */
+@media screen and (min-width: $screen-md-min) { // 992px
+    @include grid-width($col-class, 'md', $total-colums);
+}
+
+/* Grid LG */
+@media screen and (min-width: $screen-lg-min) { // 1200px <
+    @include grid-width($col-class, 'lg', $total-colums);
+}
+
+/* Grid XL */
+@media screen and (min-width: $screen-xl-min) { // 1200px <
+    @include grid-width($col-class, 'xl', $total-colums);
+}
+
+
+
+
+

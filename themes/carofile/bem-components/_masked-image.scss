@@ -1,0 +1,149 @@
+.masked-image{
+  position: relative;
+  @include clearfix();
+  overflow: hidden;
+  
+  &__mask{
+    display: none;
+  }
+
+  &__content{
+    width: 100%;
+    align-self: center;
+  }
+
+  &__img{
+    // could use this and delete others
+    // @extend %c-img;
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+@include media-query('md') { 
+  .masked-image{
+    width: 100%;
+    display: flex;
+    
+    &__mask{
+      display: block;
+      //@include mid-right;
+      height: 100%;
+      top: 0;
+      bottom: 0;
+      position: absolute;
+      z-index: $z4;
+      width: 60%;
+      //background-size: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      //background-size: 100%;
+      // left
+      &--l{
+        left: 0;
+        background-position: right top;
+        // default is the yellow mask
+        background-image: url(../img/carofile/masks/mask-yellow-l.png);
+        
+        &--yellow2{
+          background-image: url(../img/carofile/masks/mask-yellow2-l.png);
+        }
+        &--yellow3{
+          background-image: url(../img/carofile/masks/mask-yellow3-l.png);
+        }
+        &--yellow4{
+          background-image: url(../img/carofile/masks/mask-yellow4-l.png);
+        }
+        &--grey{
+          background-image: url(../img/carofile/masks/mask-grey-l.png);
+        }
+        &--grey2{
+          background-image: url(../img/carofile/masks/mask-grey2-l.png);
+        }
+        &--grey3{
+          background-image: url(../img/carofile/masks/mask-grey3-l.png);
+        }
+        &--grey4{
+          background-image: url(../img/carofile/masks/mask-grey4-l.png);
+        }
+      }
+
+      // right
+      &--r{
+        right: 0;
+        background-position: left top;
+        // default is the yellow mask
+        background-image: url(../img/carofile/masks/mask-yellow-r.png);
+        
+        &--yellow2{
+          background-image: url(../img/carofile/masks/mask-yellow2-r.png);
+        }
+        &--yellow3{
+          background-image: url(../img/carofile/masks/mask-yellow3-r.png);
+        }
+        &--yellow4{
+          background-image: url(../img/carofile/masks/mask-yellow4-r.png);
+        }
+        &--grey{
+          background-image: url(../img/carofile/masks/mask-grey-r.png);
+        }
+        &--grey2{
+          background-image: url(../img/carofile/masks/mask-grey2-r.png);
+        }
+        &--grey3{
+          background-image: url(../img/carofile/masks/mask-grey3-r.png);
+        }
+        &--grey4{
+          background-image: url(../img/carofile/masks/mask-grey4-r.png);
+        }        
+      }
+    }
+
+    &__content{
+      width: 50%;
+      position: relative;
+      z-index: $z5;
+
+      &--r{
+        margin-left: auto;
+      }
+    }
+
+    &__img{      
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: auto;
+      z-index: $z2;
+      
+      &--r{
+        right: 0;
+        left: 30%;
+      }
+
+      &--l{
+        left: 0;
+        right: 30%;
+      }
+    }
+  }
+}
+@include media-query('lg') { 
+  .masked-image{
+    &--endfull{
+      min-height: 100vh;
+    }
+    &__img{      
+      &--r{
+        right: -10%;
+        left: auto;
+      }
+
+      &--l{
+        left: -10%;
+        right: auto;
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ * Full height presentation module
+ * 
+ * --------------------------------------
+ * -------------------------------------- */
+.toggle-box {
+  // feature boxes
+  &--feature {
+    height: 360px;
+    @include media-query('sm'){
+      height: 400px;
+    }
+    @include media-query('md'){
+      height: 520px;
+    }
+  }
+
+  // person boxes and posts
+  &--post,
+  &--person {
+    display: flex;
+    height: 360px;
+  }
+  
+  &__bt {
+    z-index: $z6;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    
+    &:before {
+      font-size: $icon-font;
+      content: $i-plus;
+    }
+
+    &[aria-expanded=true]{
+      &:before{
+        content: $i-cross;
+        color: $color0;
+      }
+    }
+  }
+  
+  &, &__curtain {
+    padding: $padding-2;
+    @include media-query('sm'){
+      padding: $padding-px-sm;
+    }  
+  }
+  &__ct {
+    width: 100%;
+  }
+}
