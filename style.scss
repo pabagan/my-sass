@@ -1,22 +1,7 @@
-/**--------------------------------------
- * --------------------------------------
- *
- *
- *   Includes and Configuration
- *
- *
- * --------------------------------------
- * -------------------------------------- */
+@import "config";
 // Includes
 @import "inc/mixins/mixins";
 @import "inc/functions/functions";
-
-// Config vars
-//@import "config";
-
-// Shine overwrites
-//@import "themes/shine-coaching/shine-config";
-@import "themes/carofile/carofile-config";
 
 /**--------------------------------------
  * --------------------------------------
@@ -27,17 +12,15 @@
  *
  * --------------------------------------
  * -------------------------------------- */
-@import "base/resets/normalize";
-@import "base/resets/normalize-extended";
-//@import "base/fonts/fonts-percentage"; // declares percengage font
-@import "base/fonts/fonts-rem";
-//@import "base/fonts/font-face";
-//@import "base/colors/colors-shine";
-@import "base/colors/colors";
+@import "base/normalize";
+@import "base/normalize-extended";
+@import "base/fonts";
+@import "base/colors";
+
 // Default vertical rythm.
-// Is complemented via classes living in 
+// Is complemented via classes living in
 // component/margins and component/paddings.
-@import "base/vertical-rythm/vertical-rythm";
+//@import "base/vertical-rythm/vertical-rythm";
 
 /**--------------------------------------
  * --------------------------------------
@@ -47,133 +30,112 @@
  *
  *
  * --------------------------------------
- * -------------------------------------- */ 
-//@import "layout/01-toggled-navigation"; 
-//@import "layout/grid/grid-width";
-@import "layout/grid/grid-width-flex";
-@import "layout/grid/grid-height";
+ * -------------------------------------- */
 
-// testing
-@import "layout/flex/flex";
-//@import "layout/flex-3-cols";
+ // Grids
+@import "layout/grid-width";
+@import "layout/grid-height";
 
+// Flex
+@import "layout/flex";
+@import "layout/grid-width-flex";
+
+// Spacing
+@import "layout/paddings";
+@import "layout/margins";
 
 /**--------------------------------------
- * --------------------------------------
- *
  *
  *   SMACSS - Components
  *
  *
- * --------------------------------------
- * -------------------------------------- */
-//@import "components/alerts/alerts";
-@import "components/appear/appear";
-@import "components/borders/borders";
-@import "components/sizes/heights-rem";
-@import "components/sizes/widths-rem";
-@import "components/squares/squares";
+ *  TODO: as using rewrite to BEM and test.
+ *        also take files to a common parent
+ *        folder components
+ *
+ * ------------------------------------- */
+@import "components/presentation-full";
+//@import "components/subscribe";
+//@import "components/masked-image";
+//@import "components/toggle-boxes";
+//@import "components/post-loop";
+//@import "components/bubble-content";
+//@import "components/footer";
+
+// Old no BEM
+//@import "components/OLD_NO_BEM/alerts/alerts";
+//@import "components/OLD_NO_BEM/appear/appear";
+//@import "components/OLD_NO_BEM/borders/borders";
+//@import "components/OLD_NO_BEM/sizes/heights-rem";
+//@import "components/OLD_NO_BEM/sizes/widths-rem";
+//@import "components/OLD_NO_BEM/squares/squares";
 
 // margins & paddings
-@import "components/boxes/boxes";
-@import "components/paddings/paddings";
-@import "components/paddings/paddings-new";
-@import "components/margins/margins";
+//@import "components/OLD_NO_BEM/boxes/boxes";
 
 
-@import "components/cards/cards";
-@import "components/bars/bars";
-@import "components/backgrounds/backgrounds";
-@import "components/arrowed-lay/inner-arrow";
-//@import "components/arrowed-lay/outer-arrow";
-@import "components/forms/forms";
-@import "components/images/images";
-@import "components/embeds/embeds";
-@import "components/screen-readers/screen-readers";
-@import "components/icons/icons";
-@import "components/icons/carofile";
-//@import "components/icons/bonicons-md";
-@import "components/lists/lists";
-@import "components/lists/list-adminUI";
-@import "components/lists/list-adminUI-flex";
-@import "components/navbar/navbar";
-@import "components/buttons/button-bg";
-@import "components/buttons/button-ln";
-@import "components/shadows/shadows";
-@import "components/media/media";
-//@import "components/modals/modals";
-@import "components/navigation/navigation";
-@import "components/navbar/navbar";
-@import "components/nav-filter/nav-filter";
-@import "components/navigation/superfish";
-//@import "components/slides/royal-slider";
-@import "components/separators/blank-space";
-@import "components/separators/separators";
-@import "components/sliders/owl-carousel2";
-@import "components/sliders/owl-theme2";
-@import "components/curtains/curtains";
- 
+//@import "components/OLD_NO_BEM/cards/cards";
+//@import "components/OLD_NO_BEM/bars/bars";
+//@import "components/OLD_NO_BEM/backgrounds/backgrounds";
+//@import "components/OLD_NO_BEM/arrowed-lay/inner-arrow";
+//@import "components/OLD_NO_BEM/arrowed-lay/outer-arrow";
+//@import "components/OLD_NO_BEM/forms/forms";
+//@import "components/OLD_NO_BEM/images/images";
+//@import "components/OLD_NO_BEM/embeds/embeds";
+//@import "components/OLD_NO_BEM/screen-readers/screen-readers";
+//@import "components/OLD_NO_BEM/icons/icons";
+//@import "components/OLD_NO_BEM/icons/carofile";
+//@import "components/OLD_NO_BEM/icons/bonicons-md";
+//@import "components/OLD_NO_BEM/lists/lists";
+//@import "components/OLD_NO_BEM/lists/list-adminUI";
+//@import "components/OLD_NO_BEM/lists/list-adminUI-flex";
+//@import "components/OLD_NO_BEM/navbar/navbar";
+//@import "components/OLD_NO_BEM/buttons/button-bg";
+//@import "components/OLD_NO_BEM/buttons/button-ln";
+//@import "components/OLD_NO_BEM/shadows/shadows";
+//@import "components/OLD_NO_BEM/media/media";
+//@import "components/OLD_NO_BEM/modals/modals";
+//@import "components/OLD_NO_BEM/navigation/navigation";
+//@import "components/OLD_NO_BEM/navbar/navbar";
+//@import "components/OLD_NO_BEM/nav-filter/nav-filter";
+//@import "components/OLD_NO_BEM/navigation/superfish";
+//@import "components/OLD_NO_BEM/slides/royal-slider";
+//@import "components/OLD_NO_BEM/separators/blank-space";
+//@import "components/OLD_NO_BEM/separators/separators";
+//@import "components/OLD_NO_BEM/sliders/owl-carousel2";
+//@import "components/OLD_NO_BEM/sliders/owl-theme2";
+//@import "components/OLD_NO_BEM/curtains/curtains";
+
 
 /**--------------------------------------
- * --------------------------------------
  *
+ * SMACSS - base states
  *
- *   SMACSS - base states
+ *  TODO: as using rewrite to BEM and test.
+ *        also take files to a common parent
+ *        folder components
  *
- *
- * --------------------------------------
  * -------------------------------------- */
-@import "states/z-index/z-index";
-@import "states/alignments/child-align";
-@import "states/alignments/block-align"; // floats
-@import "states/alignments/text-align";
-@import "states/display/display";
-@import "states/positions/positions";
-@import "states/scroll/scroll";
-@import "states/text/text-states";
-//@import "states/transitions/transitions";
-@import "states/visibility/visibility";
+ @import "states/alignment";
+ @import "states/alignment-children"; // floats
+ @import "states/display";
+ @import "states/position";
+ @import "states/scroll";
+ @import "states/transition";
+ @import "states/typo";
+ @import "states/visibility";
+ @import "states/z-index";
 
 /**--------------------------------------
- * --------------------------------------
  *
+ * Vendor CSSs
  *
- *   Vendor CSSs
- *
- *
- * --------------------------------------
  * -------------------------------------- */
-//@import "vendor/animate-sass/animate";
+ //@import "inc/vendor/animate-sass/animate";
 
 
-/**--------------------------------------
- * --------------------------------------
- *
- *
- *   WordPress Components
- *
- *
- * --------------------------------------
- * -------------------------------------- */
-// @import "wordpress/wordpress";
 
-/**--------------------------------------
- * --------------------------------------
- *
- *
- *   SMACSS - themes
- *
- *
- * --------------------------------------
- * -------------------------------------- */
-// shine
-@import "themes/carofile/carofile";
-
-// activate config at start of this 
-// file too
-//@import "themes/shine-coaching/shine"; 
-
-/**--------------------------------------
+ /**--------------------------------------
  * --------------------------------------
  *
  *
@@ -182,15 +144,6 @@
  *
  * --------------------------------------
  * -------------------------------------- */
-@import "../unitTest/unitTest";
+//@import "../unitTest/unitTest";
 
-/**--------------------------------------
- * --------------------------------------
- *
- *
- *   Exploratory code
- *
- *
- * --------------------------------------
- * -------------------------------------- */
 @import "exploratory";

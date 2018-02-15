@@ -1,0 +1,19 @@
+/**--------------------------------------
+ *
+ *   Alignments
+ *
+ * -------------------------------------- */
+/* Floats */
+.u-fl{ float: left !important }
+.u-fr{ float: right !important }
+.u-f0{ float: none  !important}
+
+.u-aligncenter {
+    margin-right: auto !important;
+	margin-left: auto !important;
+}
+
+/* Texts */
+.u-alignl { text-align: left }
+.u-alignr { text-align: right }
+.u-alignc { text-align: center }

@@ -1,9 +1,9 @@
-// 
+//
 // Dinamic CSS positions
 // --------------------------------------
 $positions: top, right, bottom, left;
 
-// 
+//
 // Define base rem sizes
 // --------------------------------------
 $size-rem-1     	: 1rem;
@@ -30,7 +30,7 @@ $rem-sizes: (
     'xl'    : $size-rem-xl,
 );
 
-// 
+//
 // Typography
 // --------------------------------------
 // google fonts
@@ -42,8 +42,8 @@ $main-font          : Helvetica, Arial, sans-serif !important;
 $second-font        : Helvetica, Arial, sans-serif !important;
 $monospace-font     : Menlo, Monaco, Consolas, "Courier New", monospace !default;
 
-// 
-// 1. Diseño da tamaño de fuentes en píxeles 
+//
+// 1. Diseño da tamaño de fuentes en píxeles
 //
 /*
 $jumbo-px   : 66.666;
@@ -69,21 +69,21 @@ $p-sm-px    : 16;
 $p-px       : 20;
 $p-lg-px    : 24;
 
-// 
+//
 // base root sizes
-// 
+//
 $fs-mobile    : 14.666;
 $fs-tablet    : 14.666;
 $fs-desktop   : 20;
 
-// 
-// Responsive breakpoints to change 
+//
+// Responsive breakpoints to change
 // base html font-size.
-// 
+//
 $font-changeat_1 : 'sm';
 $font-changeat_2 : 'xl';
 
-// Conver size in % and keep in variables. 
+// Conver size in % and keep in variables.
 // It computes size consider $fs-px in relation
 // with base font size at desktop size
 $fs-base : $fs-desktop;
@@ -108,9 +108,9 @@ $lh-sm  : 1.166;
 $lh-md  : 1.2;
 $lh-lg  : 1.4;
 
-// 
+//
 // Weights
-// 
+//
 $fw400  : 400;
 $fw700  : 700;
 
@@ -130,7 +130,7 @@ $theme-sizes: (
     "f-lg"      : ( font-size: $p-lg, line-height: $lh-lg, font-weight: $fw400 ),
 );
 
-// 
+//
 // Vertical Spacing
 // --------------------------------------
 $space-xs 	: 0.333em;
@@ -150,13 +150,13 @@ $spaces:(
     'xl'    : $space-xl,
 );
 
-// 
+//
 // Inner Spacing/paddings
 // --------------------------------------
 /*
 
 $padding-xs     : 1.04%;
-$padding-sm     : 2.08%; 
+$padding-sm     : 2.08%;
 $padding-md     : 4.16%;
 $padding-lg     : 8.32%;
 $padding-xl     : 16.64%;
@@ -187,7 +187,18 @@ $paddings:(
     "xl": $padding-xl,
 );
 
-// 
+//
+// static paddings
+// --------------------------------------
+$padding-1: 12px;
+$padding-2: 24px;
+$padding-3: 40px;
+$padding-4: 60px;
+$padding-5: 80px;
+$padding-6: 160px;
+$padding-7: 320px;
+
+//
 // z-index
 // --------------------------------------
 $z1:  999 !default;
@@ -199,7 +210,7 @@ $z6:  1050 !default;
 $z7:  1060 !default;
 $z8:  1070 !default;
 
-// 
+//
 // Screen Breakpoints
 // --------------------------------------
 $screen-xs:                  480px !default;
@@ -237,7 +248,7 @@ $screen-sizes: (
 	'xxl': $screen-xxl-min,
 );
 
-// 
+//
 // Colors
 // --------------------------------------
 $color1     : #FECB00;  // rojo shine
@@ -248,9 +259,9 @@ $color4     : #169fdb;  // cyan
 
 $colorf 	: #ffffff;
 $color0 	: #1e1e1e;
-// 
+//
 // greys
-// 
+//
 $grey1  	: #3c3b3a;
 $grey2  	: #585756;
 $grey3  	: #706f6f;
@@ -294,7 +305,7 @@ $bodyFontColor: $grey3;
 $linksColor: $color1;
 
 
-// 
+//
 // Icons
 // --------------------------------------
 $icons-class        : 'c-icon';
@@ -319,9 +330,9 @@ $path-to-icon-font-root : '../fonts/' + $icon-font;
 //$icon-font-id        : 'h6wv1i';
 
 
-// 
+//
 // Bonicons icon variables
-// 
+//
 $i-twitter: "\e900";
 $i-facebook: "\e901";
 $i-google: "\e902";
@@ -465,16 +476,16 @@ $appHeader-height           : $size-rem-md;
 $appHeader-bg               : $color1;
 
 // Logo
-// 
-// Select using <img> or CSS background 
+//
+// Select using <img> or CSS background
 // at logo. Leave this blank '' to use <img>.
-$appLogo-margin             : 0 $space-sm; 
-$appLogo-fs                 : $h4-fs; 
-$appLogo-color              : $grey1; 
-$appLogo-height             : $appHeader-height; 
-$appLogo-img                : 'assets/img/shine-coaching-logo.svg'; 
-$appLogo-img                : ''; 
-$appLogo-img-no-svg         : 'assets/img/shine-coaching-logo.png'; 
+$appLogo-margin             : 0 $space-sm;
+$appLogo-fs                 : $h4-fs;
+$appLogo-color              : $grey1;
+$appLogo-height             : $appHeader-height;
+$appLogo-img                : 'assets/img/shine-coaching-logo.svg';
+$appLogo-img                : '';
+$appLogo-img-no-svg         : 'assets/img/shine-coaching-logo.png';
 
 // Nav Toggle
 $appToggle-icon             : $i-menu-4;

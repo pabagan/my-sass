@@ -1,0 +1,51 @@
+// display
+.u-hide-xs,
+.u-hide {
+  opacity: 0;
+  display: none;
+}
+
+.u-show-xs,
+.u-show {
+  opacity: 1;
+  display: block;
+}
+
+// show/hide per size
+@media screen and (min-width: $screen-sm-min) { // 639px
+  .u-hide-sm,{
+    opacity: 0;
+    display: none;
+  }
+
+  .u-show-sm{
+    opacity: 1;
+    display: block;
+  }
+}
+
+/* Screen MD */
+@media screen and (min-width: $screen-md-min) { // 992px
+  .u-hide-md,{
+    opacity: 0;
+    display: none;
+  }
+
+  .u-show-md{
+    opacity: 1;
+    display: block;
+  }
+}
+
+/* Screen LG*/
+@media screen and (min-width: $screen-lg-min) { // 1200px <
+  .u-hide-lg,{
+    opacity: 0;
+    display: none;
+  }
+
+  .u-show-lg{
+    opacity: 1;
+    display: block;
+  }
+}

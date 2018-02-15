@@ -1,0 +1,7 @@
+// block
+.u-block { display: block !important }
+.u-inlineB { display: inline-block !important }
+.u-circled { @include border-radius(50%) }
+
+// No overflow lays
+.u-overflow0{ overflow: hidden }

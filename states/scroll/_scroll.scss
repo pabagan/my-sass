@@ -1,8 +1,0 @@
-%is_scrollable{
-  overflow-y: scroll;
-  height: 100%;
-}
-
-.is_scrollable{
-  @extend %is_scrollable;
-}

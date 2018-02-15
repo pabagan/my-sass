@@ -1,0 +1,31 @@
+/* Font families  */
+.u-mainfont{ font-family: $main-font}
+.u-secondfont{ font-family: $second-font}
+
+/* Weight */
+// ---------------------------
+.u-w100{ font-weight: 100 !important }
+.u-w200{ font-weight: 200 !important }
+.u-w300{ font-weight: 300 !important }
+.u-w400{ font-weight: 400 !important }
+.u-w600{ font-weight: 600 !important }
+.u-w700{ font-weight: 700 !important }
+.u-w800{ font-weight: 800 !important }
+.u-w900{ font-weight: 900 !important }
+
+/* Transform */
+// http://www.u-w3schools.com/cssref/pr_text_text-transform.asp
+// ---------------------------
+.u-upper{
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+.u-lower{text-transform: lowercase}
+.u-caps{text-transform: capitalize}
+
+
+/* Font Style */
+// ---------------------------
+.u-regular { font-style: normal }
+.u-oblique { font-style: oblique }
+.u-italic{ font-style: italic }

@@ -1,0 +1,47 @@
+/**--------------------------------------
+ *
+ *   Child Alignments
+ *
+ * -------------------------------------- */
+$align-class                : 'Align';
+$start-vertical-centering   : 'sm';
+
+
+[class*="#{$align-class}"] {
+    position: relative; // ojo!! Mantener en relative, así no hay desbordamientos.
+}
+
+.#{$align-class} {
+    // center center
+    &--center { @include v-center }
+
+    // Top Aligns
+    &--tl{ @include top-left }
+    &--tc{ @include top-center }
+    &--tr{ @include top-right }
+
+    // Center Aligns
+    &--ml{ @include mid-left }
+    &--mc{ @include mid-center }
+    &--mr{ @include mid-right }
+
+    // Bottom align
+    &--bl{ @include bottom-left }
+    &--bc{ @include bottom-center }
+    &--br{ @include bottom-right }
+}
+
+
+@include media-query($start-vertical-centering){
+    &--center,
+    &--center--sm
+        { @include v-center }
+}
+
+@include media-query('md'){
+	&--center--md{ @include v-center }
+}
+
+@include media-query('lg'){
+	&--center--lg{ @include v-center }
+}

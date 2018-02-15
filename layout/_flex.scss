@@ -1,0 +1,83 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ * Flex stuffs
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+$flex-class          : 'Flex';
+
+.#{$flex-class} {
+  &--center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  // align multipe items filling
+  // parent width
+  &--align {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  // Flex child element alignment
+  &__item {
+    background-color: cornflowerblue;
+
+    &--center {
+      margin-right: auto;
+      margin-left: auto;
+    }
+    &--left {
+      margin-right: auto;
+    }
+
+    &--right {
+      margin-left: auto;
+    }
+  }
+}
+
+body{
+    position: relative;
+}
+
+.#{$flex-class}__3Cols {
+  display: block;
+  min-height: 100%;
+  align-items: stretch;
+  border: 4px solid green !important;
+
+  // Content
+  &__ct {
+    display: flex;
+    position: absolute;
+    background: green;
+    order: 1;
+    width: 60%;
+    left: 20%;
+  }
+
+  // Colums
+  &__col {
+    display: flex;
+    position: fixed;
+    width: 20%;
+    top: 0;
+    overflow-y: scroll;
+    border: 4px solid green !important;
+    height: 100%;
+
+    // left
+    &--l{
+      order: -1;
+      left: 0px;
+    }
+
+    // right
+    &--r{
+      right: 0px;
+      order: 2;
+    }
+  }
+}
